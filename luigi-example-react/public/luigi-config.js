@@ -2,19 +2,15 @@ Luigi.setConfig({
   navigation: {
     nodes: () => [
       {
-        pathSegment: 'home',
-        label: 'Home',
+        pathSegment: 'budget',
+        label: 'Budget',
+        viewUrl: 'http://localhost:5001',
+        loadingIndicator: { enabled: false },
+        virtualTree: true,
         icon: 'home',
-        viewUrl: '/sampleapp.html#/home',
-        children: [
-          {
-            pathSegment: 'budget',
-            label: 'Budget',
-            virtualTree: true,
-            keepSelectedForChildren: true,
-            viewUrl: '/sampleapp.html#/haushalt'
-          },
-        ]
+        hideFromNav: false,
+        anonymousAccess: true,
+        isExternal: false,
       }
     ]
   },
